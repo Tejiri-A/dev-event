@@ -129,6 +129,8 @@ EventSchema.pre('save', function (next) {
       .replace(/^-+|-+$/g, ''); // Remove leading/trailing hyphens
   }
 
+
+
   // Normalize date to ISO format if modified (YYYY-MM-DD)
   if (event.isModified('date')) {
     const parsedDate = new Date(event.date);
